@@ -104,19 +104,19 @@
             </div>
             <div ng-show="!gotSyntax" class="field">
                 <div class="control">
-                    <textarea class="textarea is-primary" style="height: 400px" placeholder="Paste code here"
-                        ng-model="code"></textarea>
+                    <textarea class="textarea is-primary has-fixed-size" style="height: 400px"
+                        placeholder="Paste code here" ng-model="code"></textarea>
                 </div>
             </div>
             <div ng-show="gotSyntax" class="field">
                 <pre><code>{{code}}</code></pre>
             </div>
             <div class="field" ng-show="!gotSyntax">
-                <button class="button is-primary" ng-click="save()">Save</button>
+                <button class="button is-primary is-rounded" ng-click="save()">Save</button>
             </div>
             <div class="field" ng-show="gotSyntax">
-                <button class="button is-primary">New</button>
-                <button class="button is-primary">Fork</button>
+                <button class="button is-primary is-rounded">New</button>
+                <button class="button is-primary is-rounded">Fork</button>
             </div>
         </div>
     </section>
