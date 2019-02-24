@@ -9,6 +9,12 @@ angular
 
 
 
-function mainController($scope){
-    
+function mainController($scope) {
+    $scope.gotSyntax = false;
+    $scope.save = function () {
+        document.querySelectorAll('pre code').forEach((block) => {
+            hljs.highlightBlock(block);
+        });
+        $scope.gotSyntax = true;
+    }
 }

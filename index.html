@@ -8,9 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bulma.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bulmaswatch.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/dracula.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
     <script src="js/angular.min.js"></script>
     <script src="js/controller.js"></script>
+    <script src="js/highlight.pack.js"></script>
 </head>
 
 <body ng-controller="mainController">
@@ -77,14 +79,21 @@
     </nav>
     <section class="section">
         <div class="container">
-            <div class="field">
+            <div ng-show="!gotSyntax" class="field">
                 <div class="control">
                     <textarea class="textarea is-primary" style="height: 400px"
-                        placeholder="Paste code here"></textarea>
+                        placeholder="Paste code here" ng-model="code"></textarea>
                 </div>
             </div>
-            <div class="field">
-
+            <div ng-show="gotSyntax" class="field">
+                <pre><code>{{code}}</code></pre>
+            </div>
+            <div class="field" ng-show="!gotSyntax">
+                <button class="button is-primary" ng-click="save()">Save</button>
+            </div>
+            <div class="field" ng-show="gotSyntax">
+                <button class="button is-primary">New</button>
+                <button class="button is-primary">Fork</button>
             </div>
         </div>
     </section>
