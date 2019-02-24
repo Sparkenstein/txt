@@ -7,7 +7,8 @@
     <title>txt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/bulma.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/bulmaswatch.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bulma-switch.min.css">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="css/bulmaswatch.min.css"> -->
     <link rel="stylesheet" type="text/css" media="screen" href="css/dracula.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
     <script src="js/angular.min.js"></script>
@@ -90,17 +91,29 @@
     <section class="section">
         <div class="container">
             <div class="field">
-                <div class="select is-rounded">
-                    <select>
-                        <option>Select Expiry:</option>
-                        <option>1 hour</option>
-                        <option>10 hours</option>
-                        <option>1 day</option>
-                        <option>1 Week</option>
-                        <option>1 Month</option>
-                        <option>Never</option>
-                    </select>
+                <div class="columns">
+                    <div class="column">
+                        <div class="select is-rounded">
+                            <select>
+                                <option>Select Expiry:</option>
+                                <option>1 hour</option>
+                                <option>10 hours</option>
+                                <option>1 day</option>
+                                <option>1 Week</option>
+                                <option>1 Month</option>
+                                <option>Never</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div style="padding-top: 8px;">
+                                <input id="switchThinColorDefault" type="checkbox" name="switchThinColorDefault"
+                                class="switch is-thin">
+                            <label for="switchThinColorDefault">Enable Password</label>
+                        </div>
+                    </div>
                 </div>
+
             </div>
             <div ng-show="!gotSyntax" class="field">
                 <div class="control">
