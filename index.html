@@ -114,26 +114,30 @@
                         </div>
                     </div>
                     <div class="column">
-                        <div style="padding-top: 8px;">
+                        <div class="is-verticle-mid">
                             <input id="switchThinColorDefault" type="checkbox" name="switchThinColorDefault"
                                 class="switch is-thin">
                             <label for="switchThinColorDefault">Enable Password</label>
                         </div>
                     </div>
-                    <!-- <div class="column">
-                        
-                    </div> -->
+                    <div class="column">
+                        <div class="is-verticle-mid">
+                            <input id="themeSwitcher" type="checkbox" name="themeSwitcher"
+                                class="switch is-thin">
+                            <label for="themeSwitcher">Dark Mode</label>
+                        </div>
+                    </div>
                 </div>
 
             </div>
             <div ng-show="!gotSyntax" class="field">
                 <div class="control">
-                    <textarea class="textarea is-primary has-fixed-size" style="height: 400px"
+                    <textarea class="textarea is-primary has-fixed-size" style="height: 38em;"
                         placeholder="Paste code here" ng-model="code"></textarea>
                 </div>
             </div>
             <div ng-show="gotSyntax" class="field">
-                <pre><code>{{code}}</code></pre>
+                <pre><code style="height: 38em;">{{code}}</code></pre>
             </div>
             <div class="field" ng-show="!gotSyntax">
                 <button class="button is-primary is-rounded" ng-click="save()">Save</button>
