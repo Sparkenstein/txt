@@ -40,6 +40,14 @@
                     Source
                 </a>
 
+                <a href="javascript: void 0;" class="navbar-item">
+                    FAQ
+                </a>
+
+                <a href="javascript: void 0;" class="navbar-item">
+                    Contact
+                </a>
+
                 <!-- <div class="navbar-item has-dropdown is-hoverable">
                     <a class="navbar-link">
                         More
@@ -63,26 +71,41 @@
                 </div> -->
             </div>
 
-            <!-- <div class="navbar-end">
+            <div class="navbar-end">
                 <div class="navbar-item">
-                    <div class="buttons">
-                        <a class="button is-primary">
-                            <strong>Sign up</strong>
-                        </a>
-                        <a class="button is-light">
-                            Log in
-                        </a>
+                    <div class="control">
+                        <label class="radio">
+                            <input type="radio" name="answer">
+                            Light Theme
+                        </label>
+                        <label class="radio">
+                            <input type="radio" name="answer" checked>
+                            Dark Theme
+                        </label>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
     </nav>
     <section class="section">
         <div class="container">
+            <div class="field">
+                <div class="select is-rounded">
+                    <select>
+                        <option>Select Expiry:</option>
+                        <option>1 hour</option>
+                        <option>10 hours</option>
+                        <option>1 day</option>
+                        <option>1 Week</option>
+                        <option>1 Month</option>
+                        <option>Never</option>
+                    </select>
+                </div>
+            </div>
             <div ng-show="!gotSyntax" class="field">
                 <div class="control">
-                    <textarea class="textarea is-primary" style="height: 400px"
-                        placeholder="Paste code here" ng-model="code"></textarea>
+                    <textarea class="textarea is-primary" style="height: 400px" placeholder="Paste code here"
+                        ng-model="code"></textarea>
                 </div>
             </div>
             <div ng-show="gotSyntax" class="field">
