@@ -10,5 +10,5 @@ angular
 
 
 function mainController($scope){
-    $scope.name = "Spark";
+    
 }
